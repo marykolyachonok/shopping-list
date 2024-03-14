@@ -9,7 +9,7 @@
 /* Очищать input после добавления нового элемента в список */
 
 const sendInput = document.querySelector('#input');
-const items = document.querySelector('items');
+const itemsContainer = document.querySelector('#items');
 
 sendInput.addEventListener('keydown', function(event) {
     if (event.key == 'Enter') {
@@ -22,7 +22,7 @@ sendInput.addEventListener('keydown', function(event) {
             newMessage.classList.toggle('done');
         })
         if (itemsText != '') {
-            items.append(newMessage)
+            itemsContainer.append(newMessage)
         }
         sendInput.value = '';
     }
